@@ -552,10 +552,17 @@ def main():
         else:
             render_landing()
 
-    st.markdown("""
+    demo_badge = ""
+    if not predictor.using_real_weights:
+        demo_badge = ('<span style="background:rgba(234, 179, 8, 0.15); '
+                      'color:#fde047; padding:3px 10px; border-radius:8px; '
+                      'font-size:0.75rem; font-weight:600; margin-left:8px;">'
+                      'DEMO MODE</span>')
+
+    st.markdown(f"""
     <div class="footer">
-        <strong>Retinal Eye Disease Detector</strong> — Built for screening purposes only.<br>
-        Always consult a certified ophthalmologist for medical diagnosis.
+        <strong>Retinal Eye Disease Detector</strong> {demo_badge}<br>
+        Built for screening purposes only. Always consult a certified ophthalmologist for medical diagnosis.
     </div>
     """, unsafe_allow_html=True)
 
