@@ -12,12 +12,6 @@ It also generates Grad-CAM heatmaps to show which regions of the image influence
 
 ---
 
-## Screenshots
-
-*Add your screenshots here after running the app*
-
----
-
 ## How It Works
 
 1. Upload a retinal fundus photograph (JPG/PNG/BMP)
